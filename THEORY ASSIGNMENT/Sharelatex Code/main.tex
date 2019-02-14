@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{THEORY ASSIGNMENT}								% Title
+							
+
+
+\makeatletter
+\let\thetitle\@title
+
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 0.35]{City-Logo.jpg}\\[1.0 cm]	% University Logo
+    \textsc{\LARGE CITY UNIVERSITY}\\[2.0 cm]
+    \textsc{\lARGE COMPUTER SCIENCE AND ENGINEERING}\\[0.2 cm]
+    \textsc{\lARGE ARTIFICIAL INTELLIGENT}\\[0.2 cm]
+	\textsc{\Large CSE 417}\\[0.5 cm]				% Course Code
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		
+			\begin{flushright} \large
+			\emph{STUDENT ID :} \\
+			153402342\linebreak
+			% Your Student Number
+		\end{flushright}
+	\end{minipage}\\[2 cm]
+	
+	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textsc{\Large\section{Define in your own words the following terms}}
+\subsection{AGENT }
+\textsc{\Small An agent is just something that acts (agent comes from the Latin agere, to do). Of course, all computer programs do something, but computer agents are expected to do more: operate autonomously, perceive their environment, persist over a prolonged time period, adapt to change, and create and pursue goals.} 
+
+\subsection{AGENT FUNCTION}
+\textsc{\Small The agent function is a mathematical function that maps a
+sequence of perceptions into action. The function is implemented as the agent program.The part of the agent taking an action is called an actuator.}
+
+\subsection{AGENT PROGRAM}
+\textsc{\Small The notion of 'program' appears to allow state/side-effects,
+so it is assumed that earlier percepts are memorized as needed (or that they otherwise updated the variables used within the program).in that the 'program' version can always be abstracted to the functional one. Which aspects of percept history happen to be cached by the 'program' version is merely an implementation detail.}
+\pagebreak
+
+\subsection{RATIONAL AGENTS}
+\textsc{\Small A rational agent chooses whichever action maximizes the
+expected value of the performance measure given the percept sequence to date and prior environment knowledge. A rational agent is one that does the right thing conceptually speaking; every entry in the table for the agent function is filled out correctly. Obviously, doing the right thing is better than doing the wrong thing.}
+\subsection{AUTONOMY}
+\textsc{\Small To the extent that an agent relies on the prior knowledge of its
+designer rather than on its own percepts, we say that the agent lacks autonomy. A rational agent should be autonomous .it should learn what it can to compensate for partial or incorrect prior knowledge.}
+\subsection{SIMPLE REFLEX AGENTS}
+\textsc{\Small Takes action based on only the current environment
+situation it maps the current percept into proper action ignoring the history of percepts.The mapping process could be simply a table-based or by any rule based matching algorithm. Example of this class is a robotic vacuum cleaner that deliberate in an infinite loop, each percept contains a state of a current location [clean] or [dirty] and accordingly it decides whether to [suck] or [continue-moving].}
+\subsection{MODEL-BASED REFLEX AGENTS}
+\textsc{\Small Needs memory for storing the percept history, it uses the percept history to help revealing the current unobservable aspects of the environment. example of this IA class is the self-steering mobile vision where it's necessary to check the percept history to fully understand how the world is evolving.}
+
+
+\pagebreak
+\subsection{GOAL-BASED REFLEX AGENTS}
+\textsc{\Small This kind of IA has a goal and has a strategy to reach that goal, All actions are based on its goal and from a set of possible actions it selects the one that improves the progress towards goal (not necessarily the best one). Example of this IA class is any searching robots that has initial location and want to reach a destination.}
+\subsection{UTILITY-BASED REFLEX AGENTS}
+\textsc{\Small Like the Goal-based agent but with a measure of "how much happy" an action would make me rather than the goal-based binary feedback ['happy','unhappy'], this kind of agents provide the best solution, an example is the route recommendation system which solves for the 'best' route to reach a destination.}
+\subsection{LEARNING AGENTS}
+\textsc{\Small The essential component of autonomy, this agent is capable
+of learning from experience, it has the capability of automatic information acquisition and integration into the system, any agent designed and expected to be successful in an uncertain environment is considered to be learning agent.}
+\pagebreak
+
+\textsc{\Large\section{ Difference between performance measure and the
+utility measure function.}}
+
+\textsc{\Small In general Performance measure is how we evaluate a agent. So this generally maps to the expected behavior we have from the agent.\newline 
+In contrast utility function is a function internally used by the agent to evaluate its performance.\newline 
+They could be same in some cases but it's not necessarily true. Also a performance measure exists always but a utility function might not.}
+
+
+\end{document}
